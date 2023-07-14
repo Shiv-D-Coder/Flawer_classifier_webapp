@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris Dataset Based Flawer Classifier</title>
+</head>
+<body>
+
+    <h1>Student Placement Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>sepal length (cm)</label><br>
+        <input type="text" name="sepal length (cm)"><br><br>
+
+        <label>sepal width (cm)</label><br>
+        <input type="text" name="sepal width (cm)"><br><br>
+
+        <label>petal length (cm)</label><br>
+        <input type="text" name="petal length (cm)"><br><br>
+
+        <label>petal width (cm)</label><br>
+        <input type="text" name="petal width (cm)"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris Dataset Based Flower Classifier</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Add animation to the form */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        form {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Placement Predictor</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>sepal length (cm)</label>
+        <input type="text" name="sepal length (cm)">
+        
+        <label>sepal width (cm)</label>
+        <input type="text" name="sepal width (cm)">
+        
+        <label>petal length (cm)</label>
+        <input type="text" name="petal length (cm)">
+        
+        <label>petal width (cm)</label>
+        <input type="text" name="petal width (cm)">
+        
+        <input type="submit" value="Predict">
+    </form>
+
+    <script>
+        // Add a fade-in animation to the form
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.querySelector("form");
+            form.style.opacity = 0;
+            setTimeout(function() {
+                form.style.opacity = 1;
+            }, 100);
+        });
+    </script>
+</body>
+</html>
