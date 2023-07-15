@@ -5,6 +5,8 @@ import pickle
 model = pickle.load(open('model.pkl', 'rb'))
 app = Flask(__name__)
 
+root_directory = app.root_path
+print(root_directory)
 
 @app.route('/')
 def index():
