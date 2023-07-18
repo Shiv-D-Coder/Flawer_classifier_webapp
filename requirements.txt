@@ -3,3 +3,6 @@ sklearn
 pandas
 numpy
 pickle
+boto3
+matplotlib
+seaborn
